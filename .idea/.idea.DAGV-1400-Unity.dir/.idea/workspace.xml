@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efd65e3b-1c23-40e4-a5fe-47fde27f3f36" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DAGV-1400-Unity.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DAGV-1400-Unity.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project (1)/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/My project (1)/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
-    </list>
+    <list default="true" id="efd65e3b-1c23-40e4-a5fe-47fde27f3f36" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1695680196464</updated>
       <workItem from="1695680198304" duration="673000" />
-      <workItem from="1695848776852" duration="3941000" />
+      <workItem from="1695848776852" duration="4065000" />
     </task>
     <servers />
   </component>

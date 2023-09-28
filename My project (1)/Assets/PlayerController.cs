@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -9,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float gravity = 9f;
 
     private CharacterController controller;
-    private Vector3 moveDirection;
 
     private bool isJumping;
 
@@ -23,7 +20,19 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontalinput = Input.GetAxis("Horizontal") * moveSpeed;
-        float veritcalinput = Input.GetAxis("Vertical") * moveSpeed;
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        Vector3 direction = new Vector3(horizontalInput, 0f , verticalInput).normalized;
+
+        if (direction.magnitude >= 0.1f)
+        {
+            controller.Move(direction * moveSpeed * Time.deltaTime);
+        }
+        
+
+        if (Input.GetKeyDown(KeyCode.Space));
+        { 
+            isJumping = true;
+        }
     }
 }
