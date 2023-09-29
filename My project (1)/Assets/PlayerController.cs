@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 7f;
+    [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private float gravity = 9f;
 
@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontalInput, 0f , verticalInput).normalized;
+        Vector3 direction = new Vector3(horizontalInput, -gravity * Time.deltaTime , verticalInput).normalized;
 
         if (direction.magnitude >= 0.1f)
         {
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
 
-        if (Input.GetKeyDown(KeyCode.Space));
+        if (Input.GetButtonDown("Jump"));
         { 
             isJumping = true;
             return;
