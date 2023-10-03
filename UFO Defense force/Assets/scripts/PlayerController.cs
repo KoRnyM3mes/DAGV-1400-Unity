@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,5 +41,10 @@ public class PlayerController : MonoBehaviour
             Instantiate(LaserBlast, PlayerBlaster.transform.position, LaserBlast.transform.rotation);
             //creates laser blast at the blaster position and rotation
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(other.gameObject);
     }
 }
