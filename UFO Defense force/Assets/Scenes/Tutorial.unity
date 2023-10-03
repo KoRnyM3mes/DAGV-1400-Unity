@@ -414,6 +414,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1964456268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1964456269}
+  m_Layer: 0
+  m_Name: PlayerBlaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1964456269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964456268}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.635}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2075237700}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2075237696
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,6 +457,7 @@ GameObject:
   - component: {fileID: 2075237699}
   - component: {fileID: 2075237698}
   - component: {fileID: 2075237697}
+  - component: {fileID: 2075237701}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -516,9 +548,27 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -8.4}
   m_LocalScale: {x: 1.0655725, y: 0.28584, z: 1.5276}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1964456269}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2075237701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075237696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d078ec13d6621468d64b7207cc003a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalinput: 0
+  speed: 15
+  Bounds: 23
+  PlayerBlaster: {fileID: 1964456269}
+  LaserBlast: {fileID: 6921154697005411895, guid: cdf034b079e53d14290dd10f16b82d1c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
