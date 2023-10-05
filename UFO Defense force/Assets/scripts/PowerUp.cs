@@ -5,19 +5,29 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    public float speed;
+
+    public float multiplier = 1.5f;
+    private float moveSpeed = 3.5f;
     void Update()
     {
-        transform.Translate(Vector3.down * Time.deltaTime * speed);
+        transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        pickup();
+        if (other.CompareTag("Player"))
+        {
+            Pickup(other);
+        }
     }
 
-    void pickup()
+    void Pickup(Collider player)
     {
         Debug.Log("PowerUp Obtained!");
+
+        PlayerController stats = player.GetComponent<PlayerController>();
+        stats.speed *= multiplier;
+        
+        Destroy(gameObject);
     }
 }
