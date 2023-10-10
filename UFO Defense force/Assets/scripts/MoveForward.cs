@@ -9,6 +9,6 @@ public class MoveForward : MonoBehaviour
     void Update()
     {
         //moves blasts forward
-        transform.Translate(Vector3.up * Time.deltaTime * speed);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 }
