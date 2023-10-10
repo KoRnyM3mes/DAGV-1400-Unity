@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class EnemySpawnManager : MonoBehaviour
 {
+    private float spawnRangeX = 20f;
+    private float spawnPositionZ = 20f;
     public GameObject[] ufoPrefabs; //array to store ufo ships
-    public int ufoIndex;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.S))
         {
-            Instantiate(ufoPrefabs[ufoIndex], new Vector3(0, 0, 20), ufoPrefabs[ufoIndex].transform.rotation);
+            Vector3 spawnPOs = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPositionZ);
+            //spawns UFO in a random location within the bounds of the game
+            int ufoIndex = Random.Range(0,ufoPrefabs.Length);//picks random prefab in UFOs
+            Instantiate(ufoPrefabs[ufoIndex], spawnPOs, ufoPrefabs[ufoIndex].transform.rotation);
+            //instantiates a UFO from the array
         }
     }
 }

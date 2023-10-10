@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4596920609469054674}
   - component: {fileID: 6756902509972629397}
   - component: {fileID: 7179478278498608764}
+  - component: {fileID: -3029833753386519813}
   m_Layer: 0
   m_Name: Mothership
   m_TagString: Untagged
@@ -119,3 +120,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+--- !u!114 &-3029833753386519813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5416838284420184425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6064cd287d6997469691a37ab74de6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TopBounds: 50
+  LowBounds: -15
