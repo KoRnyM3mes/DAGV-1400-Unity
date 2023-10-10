@@ -13,14 +13,18 @@ public class PlayerController : MonoBehaviour
     public Transform PlayerBlaster;
     public GameObject LaserBlast;
     // laser blasters
-    // Start is called before the first frame update
-    void Start()
+    void Update()
     {
+        PlayerMovement();
         
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Instantiate(LaserBlast, PlayerBlaster.transform.position, LaserBlast.transform.rotation);
+            //creates laser blast at the blaster position and rotation
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void PlayerMovement()
     {
         horizontalinput = Input.GetAxis("Horizontal");
         
@@ -35,12 +39,6 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(Bounds, transform.position.y, transform.position.z);
         }
         //keeps player inside playing field
-        
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Instantiate(LaserBlast, PlayerBlaster.transform.position, LaserBlast.transform.rotation);
-            //creates laser blast at the blaster position and rotation
-        }
     }
 
     private void OnTriggerEnter(Collider other)
