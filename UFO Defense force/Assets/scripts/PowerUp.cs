@@ -11,6 +11,7 @@ public class PowerUp : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.down * moveSpeed * Time.deltaTime); //Moves powerup down screen
+
     }
 
     private void OnTriggerEnter(Collider other) //collider for power up
@@ -27,7 +28,7 @@ public class PowerUp : MonoBehaviour
 
         PlayerController stats = player.GetComponent<PlayerController>(); //gets speed component from player controller script
         stats.speed *= multiplier; // applies the speed boost (perma rn)
-        
+
         Destroy(gameObject);  //destroys the powerup capsule 
     }
 }
