@@ -26,6 +26,6 @@ public class DestroyOutOfBounds : MonoBehaviour
             Destroy(gameObject);
             Time.timeScale = 0;
         }
-        // destroys game objects
+        // destroys game objects, sets time scale to 0 if lower bounds
     }
 }

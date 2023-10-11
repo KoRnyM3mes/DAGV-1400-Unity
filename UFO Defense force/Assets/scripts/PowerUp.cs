@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-
+    private float TopBounds = 50f;
+    private float LowBounds = -15f;
     public float multiplier = 1.5f;
     private float moveSpeed = 3.5f;
     void Update()
     {
         transform.Translate(Vector3.down * moveSpeed * Time.deltaTime); //Moves powerup down screen
-
+        Destroyer();
+        Flasher();
     }
 
     private void OnTriggerEnter(Collider other) //collider for power up
@@ -30,5 +32,23 @@ public class PowerUp : MonoBehaviour
         stats.speed *= multiplier; // applies the speed boost (perma rn)
 
         Destroy(gameObject);  //destroys the powerup capsule 
+    }
+
+    void Destroyer()
+    {
+        if (transform.position.z > TopBounds)
+        {
+            Destroy(gameObject);
+        } 
+        else if (transform.position.z < LowBounds)
+        {
+            Destroy(gameObject);
+        }
+        // destroys powerup when it reaches the low point
+    }
+
+    void Flasher()
+    {
+
     }
 }
