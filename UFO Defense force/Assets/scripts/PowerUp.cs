@@ -13,7 +13,6 @@ public class PowerUp : MonoBehaviour
     {
         transform.Translate(Vector3.down * moveSpeed * Time.deltaTime); //Moves powerup down screen
         Destroyer();
-        Flasher();
     }
 
     private void OnTriggerEnter(Collider other) //collider for power up
@@ -39,16 +38,11 @@ public class PowerUp : MonoBehaviour
         if (transform.position.z > TopBounds)
         {
             Destroy(gameObject);
-        } 
+        }
         else if (transform.position.z < LowBounds)
         {
             Destroy(gameObject);
         }
         // destroys powerup when it reaches the low point
-    }
-
-    void Flasher()
-    {
-
     }
 }

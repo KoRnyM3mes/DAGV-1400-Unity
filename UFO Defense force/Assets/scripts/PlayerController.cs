@@ -8,16 +8,23 @@ public class PlayerController : MonoBehaviour
     public float horizontalinput;
     public float speed;
     public float Bounds;
+    public GameManager gameManager;
     // movement floats
 
     public Transform PlayerBlaster;
     public GameObject LaserBlast;
     // laser blasters
+
+    private void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
+
     void Update()
     {
         PlayerMovement();
         
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && gameManager.isGameOver == false)
         {
             Instantiate(LaserBlast, PlayerBlaster.transform.position, LaserBlast.transform.rotation);
             //creates laser blast at the blaster position and rotation
