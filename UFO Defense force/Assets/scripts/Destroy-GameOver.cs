@@ -22,6 +22,7 @@ public class DestroyOutOfBounds : MonoBehaviour
         } 
         else if (transform.position.z < LowBounds)
         {
+            FindObjectOfType<AudioManager>().Play("GameOver");
             Debug.Log("Game Over, man!");
             Destroy(gameObject);
             gameManager.isGameOver = true;

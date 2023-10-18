@@ -44,7 +44,6 @@ public class GameManager : MonoBehaviour
     }
     private void EndGame()
     {
-        FindObjectOfType<AudioManager>().Play("GameOver");
         gameOverText.gameObject.SetActive(true); //enables text
         retryButton.gameObject.SetActive(true);
         mainMenuButton.gameObject.SetActive(true);
