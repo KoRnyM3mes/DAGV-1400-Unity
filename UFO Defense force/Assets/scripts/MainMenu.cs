@@ -10,11 +10,13 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneToLoad); //Loads a scene. Selected by SceneToLoad
         Debug.Log("Load complete!");
+        FindObjectOfType<AudioManager>().Play("MenuPlay");
     }
 
     public void QuitGame()
     {
-        Application.Quit();
+        FindObjectOfType<AudioManager>().Play("MenuQuit");
         Debug.Log("Quitting game.");
+        Application.Quit();
     }
 }

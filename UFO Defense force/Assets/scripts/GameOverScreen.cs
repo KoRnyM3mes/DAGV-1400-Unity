@@ -8,17 +8,20 @@ public class GameOverScreen : MonoBehaviour
     public int sceneToLoad;
     public void RestartGame()
     {
+        FindObjectOfType<AudioManager>().Play("MenuPlay");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void MainMenu()
     {
+        FindObjectOfType<AudioManager>().Play("MenuQuit");
         SceneManager.LoadScene(sceneToLoad);
         Debug.Log("Load complete!");
     }
     public void QuitGameOver()
     {
-        Application.Quit();
+        FindObjectOfType<AudioManager>().Play("MenuQuit");
         Debug.Log("Quitting game.");
+        Application.Quit();
     }
 }

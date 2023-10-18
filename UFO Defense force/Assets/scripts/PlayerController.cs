@@ -27,7 +27,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && gameManager.isGameOver == false)
         {
             Instantiate(LaserBlast, PlayerBlaster.transform.position, LaserBlast.transform.rotation);
-            //creates laser blast at the blaster position and rotation
+            FindObjectOfType<AudioManager>().Play("Laser Blast");
+            //creates laser blast at the blaster position and rotation, plays laser sound
         }
     }
 

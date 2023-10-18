@@ -16,6 +16,7 @@ public class DetectCollision : MonoBehaviour
 
    private void OnTriggerEnter(Collider other)
    {
+      FindObjectOfType<AudioManager>().Play("UFODeath");
       scoreManager.IncreaseScore(scoreToGive); //increases score
       Destroy(other.gameObject);
       Destroy(gameObject); //destroys both objects on collision 

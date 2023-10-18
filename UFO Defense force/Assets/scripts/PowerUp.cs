@@ -29,6 +29,7 @@ public class PowerUp : MonoBehaviour
 
         PlayerController stats = player.GetComponent<PlayerController>(); //gets speed component from player controller script
         stats.speed *= multiplier; // applies the speed boost (perma rn)
+        FindObjectOfType<AudioManager>().Play("PowerupPick");
 
         Destroy(gameObject);  //destroys the powerup capsule 
     }
