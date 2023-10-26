@@ -12,4 +12,9 @@ public class IntData : ScriptableObject
         get { return value; }
         set { this.value = value; }
     }
+    
+    public void UpdateValue(int num)
+    {
+        value += num;
+    }
 }
