@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 1077106689}
   - component: {fileID: 1077106693}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: AmmoCapsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
