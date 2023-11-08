@@ -9,4 +9,8 @@ public class SpriteBehavior : MonoBehaviour
         rendererObj = GetComponent<SpriteRenderer>();
     }
 
+    public void ChangeRenderColor(ColorID obj)
+    {
+        rendererObj.color = obj.value;
+    }
 }
