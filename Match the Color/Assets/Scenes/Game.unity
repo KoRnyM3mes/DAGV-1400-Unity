@@ -523,13 +523,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 40035601}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 40035605}
+        m_TargetAssemblyTypeName: SpriteBehavior, Assembly-CSharp
+        m_MethodName: ChangeRenderColor
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: d52f7aa1e6a6f1249a4e0d1e33aaf57a, type: 2}
+          m_ObjectArgumentAssemblyTypeName: ColorID, Assembly-CSharp
           m_IntArgument: -10
           m_FloatArgument: 0
           m_StringArgument: 
