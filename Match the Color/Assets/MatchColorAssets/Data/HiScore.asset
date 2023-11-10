@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a69c2ee8f9a80f44a682a304dab3691, type: 3}
   m_Name: HiScore
   m_EditorClassIdentifier: 
-  value: 10
+  value: 0
