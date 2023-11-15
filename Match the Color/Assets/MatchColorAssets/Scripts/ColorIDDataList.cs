@@ -10,9 +10,9 @@ public class ColorIDDataList : ScriptableObject
 
     private int num;
 
-    public void SetColorRandomly()
+    public void SetColorRandomly(ColorIDDataList obj)
     {
-        num = colorIDList.Count - 1;
+        num = Random.Range(0, obj.colorIDList.Count);
         currentColor = colorIDList[num];
     }
 }

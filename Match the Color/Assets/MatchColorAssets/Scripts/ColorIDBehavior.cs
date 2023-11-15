@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class ColorIDBehavior : IdContainerBehavior
 {
-    public ColorIDDataList ColorIDDataListobj;
+    public ColorIDDataList colorIDDataListObj;
 
     private void Awake()
     {
-        idObj = ColorIDDataListobj.currentColor;
+        idObj = colorIDDataListObj.currentColor;
     }
 }
