@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class ColorMatchBahavior : MatchBehavior
 {
@@ -10,9 +10,9 @@ public class ColorMatchBahavior : MatchBehavior
         idObj = colorIDDataListObj.currentColor;
     }
 
-    public void ChangeColor(SpriteRenderer renderer)
+    public void ChangeColor(SpriteRenderer render)
     {
         var newColor = idObj as ColorID;
-        renderer.color = newColor.value;
+        if (newColor != null) render.color = newColor.value;
     }
 }
