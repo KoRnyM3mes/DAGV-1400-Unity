@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: -5330491038481695541}
   - component: {fileID: 1367185279586374284}
   - component: {fileID: -5929933733310629065}
-  - component: {fileID: 7922006423064474737}
   - component: {fileID: -8308559627540678573}
   - component: {fileID: 3836769567985431442}
+  - component: {fileID: 3126910883227880799}
   m_Layer: 7
   m_Name: Ring
   m_TagString: Untagged
@@ -165,23 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db4e64c4fccc1f74b9c291794e5b2b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7922006423064474737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3329598967938385544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf7770d3f7410f4786ffef94e4aa45e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idObj: {fileID: 0}
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  colorIDDataListObj: {fileID: 11400000, guid: 37c07efd02bbe634588a259c39beecb6, type: 2}
 --- !u!114 &-8308559627540678573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,6 +245,23 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   colorIDDataListObj: {fileID: 11400000, guid: 37c07efd02bbe634588a259c39beecb6, type: 2}
+--- !u!114 &3126910883227880799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3329598967938385544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf7770d3f7410f4786ffef94e4aa45e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idObj: {fileID: 0}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  colorIDDataListObj: {fileID: 11400000, guid: 37c07efd02bbe634588a259c39beecb6, type: 2}
 --- !u!1 &4416937328740173820
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,8 +273,9 @@ GameObject:
   - component: {fileID: 854667598020480069}
   - component: {fileID: 2915345360833251005}
   - component: {fileID: 4977355949968361283}
-  m_Layer: 6
-  m_Name: Dot
+  - component: {fileID: 6164402003380449808}
+  m_Layer: 7
+  m_Name: InDot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -359,3 +360,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db4e64c4fccc1f74b9c291794e5b2b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6164402003380449808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416937328740173820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf7770d3f7410f4786ffef94e4aa45e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idObj: {fileID: 0}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  colorIDDataListObj: {fileID: 11400000, guid: 37c07efd02bbe634588a259c39beecb6, type: 2}
