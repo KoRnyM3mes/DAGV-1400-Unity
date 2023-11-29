@@ -13,6 +13,6 @@ public class ColorMatchBahavior : MatchBehavior
     public void ChangeColor(SpriteRenderer render)
     {
         var newColor = idObj as ColorID;
-        if (newColor != null) render.color = newColor.value;
+        render.color = newColor.value;
     }
 }
