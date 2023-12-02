@@ -5,6 +5,6 @@ public class ColorIDBehavior : IdContainerBehavior
 
     private void Awake()
     { 
-        idObj = colorIDDataListObj.currentColor;
+       idObj = colorIDDataListObj.currentColor;
     }
 }
